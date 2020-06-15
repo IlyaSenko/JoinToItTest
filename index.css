@@ -2,6 +2,10 @@ html {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
+.slide-menu {
+  display: none !important;
+}
+
 header {
   display: flex !important;
   background: #F6F8F9;
@@ -78,6 +82,10 @@ header p {
     display: none !important;
   }
 
+  .slide-menu {
+    display: block !important;
+  }
+
   .logo {
     font-size: 13px !important;
   }
@@ -98,12 +106,108 @@ header.mobile {
   padding: 16px;
 }
 
-.burger {
+.slide-menu {
   display: block;
+  position: fixed;
+  width: 76.5vw;
+  background: #F6F8F9;
+  z-index: 4;
+  top: 0;
+  height: 100vh;
+  left: -76.5vw;
+}
+
+.slide-menu-top {
+  /* padding: 37px 40px 112px; */
+  height: 61%;
+}
+
+.slide-menu .slide-menu-top-controls {
+  /* margin-bottom: 86px; */
+  padding: 37px 6vh 10vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.slide-menu-top-controls a {
+  background: url("./img/arrow-back.svg");
+  width: 6px;
+  height: 10px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.slide-menu-item {
+  display: flex;
+  align-items: baseline;
+  /* margin-bottom: 34px; */
+  cursor: pointer;
+  padding: 0 6vh 5.3vh;
+}
+
+.slide-menu-item  .menu-item {
+  font-size: 11px;
+  margin: 0 !important;
+}
+
+.slide-menu-item img {
+  margin-right: 30px;
+  width: 16px;
+}
+
+.slide-menu:target {
+  display: block;
+  left: 0;
+}
+
+.slide-menu-bottom {
+  background: #A6ADB4;
+  height: 39%;
+  /* padding: 6vh; */
+}
+
+.slide-menu-bottom-pages {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  padding: 6vh 6vh 0;
+}
+
+.slide-menu-bottom-pages-column-item {
+  /* margin-top: 27px; */
+  color: #FFFFFF;
+  opacity: 0.5;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.slide-menu-bottom-pages-column-item:hover, .slide-menu-bottom-pages-column-item:active {
+  opacity: 1;
+}
+
+.slide-menu-bottom .social {
+  margin-left: 0 !important;
+  padding: 7vh 6vh 0 !important;
+  width: 70% !important;
+  /* margin-top: 60px; */
+}
+
+.slide-menu-bottom .social img {
+  height: 16px !important;
+  width: 16px !important;
+}
+
+.burger {
   display: flex;
   flex-direction: column;
   align-items: baseline;
   cursor: pointer;
+  position: relative;
+}
+
+.burger:focus .slide-menu {
+  display: block;
 }
 
 .burger img {
