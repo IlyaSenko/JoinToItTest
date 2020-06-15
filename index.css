@@ -115,6 +115,7 @@ header.mobile {
   top: 0;
   height: 100vh;
   left: -76.5vw;
+  box-shadow: 0px 0px 60px #00000099;
 }
 
 .slide-menu-top {
